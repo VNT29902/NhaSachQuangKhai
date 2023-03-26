@@ -20,7 +20,7 @@ body {
 
 .header-logo > a {
     display: block;
-    background-image: url(http://nhanam.com.vn/Content/images2/logo.png);
+    background-image: url(assets/images/logo.png);
     height: 90px;
     text-indent: -500em;
     width: 514px;
