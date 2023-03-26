@@ -1,3 +1,7 @@
+body {
+    background-color: #eee;
+}
+
 .network-social-icon {
     text-decoration: none;
 }
@@ -8,4 +12,16 @@
 
 .margin-bottom-0 {
     margin-bottom: 0;
+}
+
+.text-search {
+    font-style: italic;
+}
+
+.header-logo > a {
+    display: block;
+    background-image: url(http://nhanam.com.vn/Content/images2/logo.png);
+    height: 90px;
+    text-indent: -500em;
+    width: 514px;
 }
