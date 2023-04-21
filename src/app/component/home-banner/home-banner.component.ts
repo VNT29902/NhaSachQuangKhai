@@ -13,6 +13,7 @@ export class HomeBannerComponent implements OnInit {
   constructor(private homeBannerService: HomeBannerService) { }
 
   ngOnInit() {
+    this.getHomeBanner();
   }
 
   getHomeBanner() {
