@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeBannerService } from 'src/app/service/home-banner.service';
 
 @Component({
   selector: 'app-home-banner',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeBannerComponent implements OnInit {
 
-  constructor() { }
+  images: string[] = [];
+
+  constructor(private homeBannerService: HomeBannerService) { }
 
   ngOnInit() {
   }
 
+  getHomeBanner() {
+    this.homeBannerService.getHomeBanner().subscribe(
+      data => {
+        // shallow copy
+        this.images = data;
+      }
+    );
+  }
 }

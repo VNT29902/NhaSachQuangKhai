@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from './product.component';
-import { HomeBannerModule } from '../home-banner/home-banner.module';
+import { ProductComponent } from '../component/product/product.component';
+import { HomeBannerModule } from './home-banner.module';
 
 @NgModule({
   imports: [

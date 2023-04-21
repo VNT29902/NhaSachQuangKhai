@@ -5,8 +5,9 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IconsModule } from './icon/icons.module';
-import { HomeBannerModule } from './component/home-banner/home-banner.module';
-import { ProductModule } from './component/product/product.module';
+import { HomeBannerModule } from './module/home-banner.module';
+import { ProductModule } from './module/product.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProductModule } from './component/product/product.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     IconsModule,
