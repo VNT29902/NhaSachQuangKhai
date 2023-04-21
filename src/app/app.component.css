@@ -1,0 +1,18 @@
+.header-logo > a {
+  display: block;
+  background-image: url(../assets/image/logo.png);
+  height: 90px;
+  text-indent: -500em;
+  width: 514px;
+}
+
+.btn-search-content {
+  display: flex;
+  justify-content: center;
+  /* width: 100px; */
+}
+
+.icon-search {
+  height: 20px;
+  width: 20px;
+}
