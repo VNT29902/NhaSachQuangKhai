@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
-import { ProductComponent } from '../component/product/product.component';
 import { HomeBannerModule } from './home-banner.module';
+import { ProductDetailComponent } from '../component/product-detail/product-detail.component';
 
 @NgModule({
   imports: [
@@ -9,6 +9,6 @@ import { HomeBannerModule } from './home-banner.module';
     HomeBannerModule,
     NgFor
   ],
-  declarations: [ProductComponent]
+  declarations: [ProductDetailComponent]
 })
-export class ProductModule { }
+export class ProductDetailModule { }

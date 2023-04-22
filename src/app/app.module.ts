@@ -8,21 +8,23 @@ import { IconsModule } from './icon/icons.module';
 import { HomeBannerModule } from './module/home-banner.module';
 import { ProductModule } from './module/product.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { ProductDetailModule } from './module/product-detail.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    NgbDropdownModule,
     IconsModule,
     HomeBannerModule,
     ProductModule,
-    NgbDropdownModule
+    ProductDetailModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
