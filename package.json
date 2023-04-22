@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-prod": "ng build --configuration production --base-href \"https://VNT29902.github.io\"",
+    "build-base-ref": "ng build --configuration production --base-href \"https://VNT29902.github.io\"",
+    "deploy-prod":"ngh --dir=dist/VNT29902.github.io",
+    "deploy": "npm run build-prod && npm run build-base-ref && npm run deploy-prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
