@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "book-store-management-angular": {
+    "VNT29902.github.io": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/book-store-management-angular",
+            "outputPath": "dist/VNT29902.github.io",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "book-store-management-angular:build:production"
+              "browserTarget": "VNT29902.github.io:build:production"
             },
             "development": {
-              "browserTarget": "book-store-management-angular:build:development"
+              "browserTarget": "VNT29902.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "book-store-management-angular:build"
+            "browserTarget": "VNT29902.github.io:build"
           }
         },
         "test": {
