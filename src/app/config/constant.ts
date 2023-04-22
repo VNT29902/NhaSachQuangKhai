@@ -1,3 +1,5 @@
+import { environment } from "src/environments/environment";
+
 export class Constant {
-  static API_ENDPOINT: string = "http://localhost:4000";
+  static API_ENDPOINT: string = environment.apiUrl;
 }
