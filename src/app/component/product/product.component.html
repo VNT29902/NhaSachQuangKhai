@@ -14,8 +14,9 @@
               <img src="{{product.images[0]}}" class="w-100 center-cropped" />
               <a href="#!">
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
-                  <div class="d-flex justify-content-start align-items-start h-100">
-                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$123</span></h5>
+                  <div class="d-flex justify-content-between align-items-baseline h-100 pe-3">
+                    <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">{{product.price | currency : 'VND' : 'symbol' : '2.0'}}</span></h5>
+                    <h5><span><bi name="cart-plus-fill" class="icon-cart fill-red"></bi></span></h5>
                   </div>
                 </div>
                 <div class="hover-overlay">

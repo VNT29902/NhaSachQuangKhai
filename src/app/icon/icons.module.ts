@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { BootstrapIconsModule } from 'ng-bootstrap-icons';
-import { Search, CloudUploadFill, Info, X, PlusSquare, ChevronUp } from 'ng-bootstrap-icons/icons';
+import { Search, CloudUploadFill, Info, X, PlusSquare, ChevronUp, CartPlusFill } from 'ng-bootstrap-icons/icons';
 
 // Select some icons (use an object, not an array)
 const icons = {
@@ -11,6 +11,7 @@ const icons = {
   X,
   PlusSquare,
   ChevronUp,
+  CartPlusFill,
 };
 
 @NgModule({
