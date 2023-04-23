@@ -10,6 +10,7 @@ import { ProductModule } from './module/product.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductDetailModule } from './module/product-detail.module';
+import { OrderModule } from './module/order.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProductDetailModule } from './module/product-detail.module';
     HomeBannerModule,
     ProductModule,
     ProductDetailModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
