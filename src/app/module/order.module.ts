@@ -11,6 +11,11 @@ import { HomeBannerModule } from "./home-banner.module";
     NgFor,
     IconsModule
   ],
-  declarations: [OrderComponent]
+  declarations: [
+    OrderComponent
+  ],
+  exports: [
+    OrderComponent
+  ]
 })
 export class OrderModule { }

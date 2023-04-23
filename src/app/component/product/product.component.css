@@ -12,10 +12,14 @@
   width: 20px;
 }
 
-.icon-cart:hover {
-  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
-}
-
 .fill-red {
   color: red;
+}
+
+.btn-adding-cart {
+  background-color: #fff;
+}
+
+.btn-adding-cart:hover {
+  background-color: #03DAC5;
 }

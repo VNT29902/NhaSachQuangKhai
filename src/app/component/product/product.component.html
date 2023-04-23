@@ -8,21 +8,21 @@
     <div *ngIf="products" class="grid-container">
       <div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3">
         <div class="col"
-            *ngFor="let product of products$ | async | slice: (page-1) * pageSize : page * pageSize; let i = index">
+            *ngFor="let product of products | slice: (page-1) * pageSize : page * pageSize; let i = index">
             <div *ngIf="product && product.images" class="bg-image hover-zoom ripple shadow-1-strong rounded card shadow-sm">
               <!-- size of image: 420 * 280 -->
               <img src="{{product.images[0]}}" class="w-100 center-cropped" />
-              <a href="#!">
+              <!-- <a href="#!"> -->
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
                   <div class="d-flex justify-content-between align-items-baseline h-100 pe-3">
                     <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">{{product.price | currency : 'VND' : 'symbol' : '2.0'}}</span></h5>
-                    <h5><span><bi name="cart-plus-fill" class="icon-cart fill-red"></bi></span></h5>
+                    <h5><button type="button" class="btn btn-outline-success btn-adding-cart" (click)="addToCart(product.documentID)"><bi name="cart-plus-fill" class="icon-cart fill-red"></bi></button></h5>
                   </div>
                 </div>
                 <div class="hover-overlay">
                   <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
                 </div>
-              </a>
+              <!-- </a> -->
             </div>
         </div>
       </div>

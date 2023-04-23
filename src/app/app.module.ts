@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductDetailModule } from './module/product-detail.module';
 import { OrderModule } from './module/order.module';
+import { ProductService } from './service/product.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { OrderModule } from './module/order.module';
     ProductDetailModule,
     OrderModule,
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
