@@ -135,13 +135,15 @@ export class ProductComponent implements OnInit {
   // ];
 
   page = 1;
-  pageSize = 20;
+  pageSize = 5;
+  productsLength = 1;
 
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
     this.productService.getProducts().subscribe(products => {
       this.products = products;
+      this.productsLength = products.length;
     });
   }
 

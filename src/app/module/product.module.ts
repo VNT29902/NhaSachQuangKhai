@@ -4,11 +4,13 @@ import { ProductComponent } from '../component/product/product.component';
 import { HomeBannerModule } from './home-banner.module';
 import { IconsModule } from './icons.module';
 import { OrderModule } from './order.module';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     CommonModule,
     NgFor,
+    NgbPaginationModule,
     IconsModule,
     HomeBannerModule,
     OrderModule,

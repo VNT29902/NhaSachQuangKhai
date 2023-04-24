@@ -9,14 +9,14 @@
 <!-- Nav Header -->
 <nav class="navbar navbar-expand-lg navbar-light sticky-top pt-0">
   <div class="container py-2 bg-lighter-green">
-    <a class="navbar-brand" href="#">Nhã Nam</a>
+    <a class="navbar-brand" routerLink="/" tabindex="0">Nhã Nam</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
       (click)="isMenuCollapsed = !isMenuCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" tabindex="1">
         <!-- Danh muc sach -->
         <li ngbDropdown class="nav-item dropdown">
           <label ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -24,43 +24,43 @@
             Danh mục sách
           </label>
           <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Văn học Việt Nam</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Văn học nước ngoài</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Thiếu nhi</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Thời sự chính trị</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Khoa học tự nhiên - Nhân văn</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Tham khảo</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Văn học Việt Nam</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Văn học nước ngoài</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Thiếu nhi</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Thời sự chính trị</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Khoa học tự nhiên - Nhân văn</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Tham khảo</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Sách bán chạy</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Chương trình khuyến mãi</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Giảm giá đặc biệt</a></li>
-            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Đặt trước sách</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Sách bán chạy</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Chương trình khuyến mãi</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Giảm giá đặc biệt</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" routerLink="/product">Đặt trước sách</a></li>
           </ul>
         </li>
       </ul>
       <!-- Tim kiem -->
       <form class="d-flex col-xl-6 me-auto">
-        <input class="form-control me-2 text-search" type="search" placeholder="Tìm kiếm sách..." aria-label="Tìm kiếm">
-        <button class="btn btn-outline-success btn-search-content col-2 col-lg-2 col-md-2 col-sm-2 col-2" type="submit">
+        <input class="form-control me-2 text-search" type="search" placeholder="Tìm kiếm sách..." aria-label="Tìm kiếm" tabindex="2">
+        <button class="btn btn-outline-success btn-search-content col-2 col-lg-2 col-md-2 col-sm-2 col-2" type="submit" tabindex="3">
           <bi name="search" class="icon-search fill-blue-primary"></bi>
         </button>
       </form>
       <!-- Individual -->
       <ul class="navbar-nav ms-auto">
         <!-- Account -->
-        <li class="nav-item">
+        <li class="nav-item" tabindex="4">
           <div class="nav-item-content d-flex justify-content-center align-items-center">
             <bi name="person-circle" class="icon-search fill-blue-primary"></bi>
-            <a class="nav-link" routerLink="/account" tabindex="-1">Thông tin tài khoản</a>
+            <a class="nav-link" routerLink="/account">Thông tin tài khoản</a>
           </div>
         </li>
         <!-- Cart -->
-        <li class="nav-item">
+        <li class="nav-item" tabindex="5">
           <div class="nav-item-content d-flex justify-content-center align-items-center">
             <bi name="cart4" class="icon-cart fill-black"></bi>
-            <a class="nav-link" routerLink="/order" tabindex="-1">Giỏ hàng</a>
+            <a class="nav-link" routerLink="/order">Giỏ hàng</a>
           </div>
         </li>
       </ul>
@@ -81,18 +81,18 @@
       <!-- Left -->
 
       <!-- Right -->
-      <div>
-        <a href="" class="text-white me-4 network-social-icon">
-          <i class="fa fa-facebook"></i>
+      <div class="d-flex">
+        <a href="https://www.facebook.com/" target="_blank" class="text-white me-4 network-social-icon">
+          <bi name="facebook" class="icon-cart fill-black"></bi>
         </a>
-        <a href="" class="text-white me-4 network-social-icon">
-          <i class="fa fa-twitter"></i>
+        <a href="https://twitter.com/" target="_blank" class="text-white me-4 network-social-icon">
+          <bi name="twitter" class="icon-cart fill-black"></bi>
         </a>
-        <a href="" class="text-white me-4 network-social-icon">
-          <i class="fa fa-google"></i>
+        <a href="https://www.google.com/" target="_blank" class="text-white me-4 network-social-icon">
+          <bi name="google" class="icon-cart fill-black"></bi>
         </a>
-        <a href="" class="text-white me-4 network-social-icon">
-          <i class="fa fa-instagram"></i>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white me-4 network-social-icon">
+          <bi name="instagram" class="icon-cart fill-black"></bi>
         </a>
       </div>
       <!-- Right -->

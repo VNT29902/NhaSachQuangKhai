@@ -24,3 +24,7 @@
 .nav-item > nav-item-content:hover {
   background-color: white;
 }
+
+.network-social-icon {
+  text-decoration: none;
+}
