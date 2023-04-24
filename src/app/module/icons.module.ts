@@ -14,7 +14,10 @@ import {
   Facebook,
   Twitter,
   Google,
-  Instagram
+  Instagram,
+  Plus,
+  Trash,
+  Dash,
 } from 'ng-bootstrap-icons/icons';
 
 // Select some icons (use an object, not an array)
@@ -32,6 +35,9 @@ const icons = {
   Twitter,
   Google,
   Instagram,
+  Plus,
+  Trash,
+  Dash,
 };
 
 @NgModule({
