@@ -8,9 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   
+  title = 'nha-nam-book-store';
+  public isMenuCollapsed = true;
+
   constructor() {
     console.log(environment.production); // Logs false for development environment
   }
 
-  title = 'nha-nam-book-store';
 }

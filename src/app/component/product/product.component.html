@@ -16,7 +16,11 @@
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
                   <div class="d-flex justify-content-between align-items-baseline h-100 pe-3">
                     <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">{{product.price | currency : 'VND' : 'symbol' : '2.0'}}</span></h5>
-                    <h5><button type="button" class="btn btn-outline-success btn-adding-cart" (click)="addToCart(product.documentID)"><bi name="cart-plus-fill" class="icon-cart fill-red"></bi></button></h5>
+                    <h5>
+                      <button type="button" class="btn btn-outline-success btn-adding-cart" (click)="addToCart(product.documentID)">
+                        <bi name="cart-plus-fill" class="icon-cart fill-red"></bi>
+                      </button>
+                  </h5>
                   </div>
                 </div>
                 <div class="hover-overlay">

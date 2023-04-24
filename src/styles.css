@@ -6,3 +6,16 @@
 .fill-blue-primary {
   color: #263238;
 }
+
+.icon-cart {
+  height: 20px;
+  width: 20px;
+}
+
+.fill-red {
+  color: red;
+}
+
+fill-black {
+  color: black;
+}

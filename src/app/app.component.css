@@ -16,3 +16,11 @@
   height: 20px;
   width: 20px;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.nav-item > nav-item-content:hover {
+  background-color: white;
+}

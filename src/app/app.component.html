@@ -10,11 +10,12 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top pt-0">
   <div class="container py-2 bg-lighter-green">
     <a class="navbar-brand" href="#">Nhã Nam</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+      (click)="isMenuCollapsed = !isMenuCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- Danh muc sach -->
         <li ngbDropdown class="nav-item dropdown">
@@ -32,33 +33,37 @@
             <li>
               <hr class="dropdown-divider">
             </li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Sách bán chạy</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Chương trình khuyến mãi</a></li>
+            <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Giảm giá đặc biệt</a></li>
             <li><a ngbDropdownItem class="dropdown-item text-uppercase" href="#">Đặt trước sách</a></li>
           </ul>
         </li>
-        <!-- Sach ban chay -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sách bán chạy</a>
-        </li>
-        <!-- Chuong trinh khuyen mai -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Chương trình khuyến mãi</a>
-        </li>
-        <!-- Giam gia dac biet -->
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Giảm giá đặc biệt</a>
-        </li>
-        <!-- Order -->
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/order" tabindex="-1">Đơn hàng</a>
-        </li>
       </ul>
       <!-- Tim kiem -->
-      <form class="d-flex col-xl-3">
+      <form class="d-flex col-xl-6 me-auto">
         <input class="form-control me-2 text-search" type="search" placeholder="Tìm kiếm sách..." aria-label="Tìm kiếm">
         <button class="btn btn-outline-success btn-search-content col-2 col-lg-2 col-md-2 col-sm-2 col-2" type="submit">
           <bi name="search" class="icon-search fill-blue-primary"></bi>
         </button>
       </form>
+      <!-- Individual -->
+      <ul class="navbar-nav ms-auto">
+        <!-- Account -->
+        <li class="nav-item">
+          <div class="nav-item-content d-flex justify-content-center align-items-center">
+            <bi name="person-circle" class="icon-search fill-blue-primary"></bi>
+            <a class="nav-link" routerLink="/account" tabindex="-1">Thông tin tài khoản</a>
+          </div>
+        </li>
+        <!-- Cart -->
+        <li class="nav-item">
+          <div class="nav-item-content d-flex justify-content-center align-items-center">
+            <bi name="cart4" class="icon-cart fill-black"></bi>
+            <a class="nav-link" routerLink="/order" tabindex="-1">Giỏ hàng</a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
