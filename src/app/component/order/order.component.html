@@ -16,35 +16,34 @@
                       <hr class="my-4">
 
                       <!-- List of ordered products -->
-                      <div *ngFor="let product of orderedProducts">
+                      <div *ngFor="let orderedProduct of orderedProducts; let i = index">
                         <!-- item 1 -->
-                        <div *ngIf="product" class="row mb-4 d-flex justify-content-between align-items-center">
+                        <div *ngIf="orderedProduct" class="row mb-4 d-flex justify-content-between align-items-center">
                           <div class="col-md-2 col-lg-2 col-xl-2">
                             <img
-                              src="{{product.images[0]}}"
+                              src="{{orderedProduct.product.images[0]}}"
                               class="img-fluid rounded-3" alt="Cotton T-shirt">
                           </div>
                           <div class="col-md-3 col-lg-3 col-xl-3">
                             <h6 class="text-muted">Category TBD</h6>
-                            <h6 class="text-black mb-0">{{product.name}}</h6>
+                            <h6 class="text-black mb-0">{{orderedProduct.product.name}}</h6>
                           </div>
                           <div class="col-md-4 col-lg-4 col-xl-3 d-flex">
-                            <button class="btn btn-link px-2 col-2 col-lg-2 col-md-2 col-sm-2">
+                            <button type="button" class="btn btn-primary px-2 col-2 col-lg-2 col-md-2 col-sm-2" (click)="decreaseQuantity(i)">
                               <bi name="dash" aria-hidden="true"></bi>
                             </button>
 
-                            <input id="form1"
-                              class="form-control form-control-sm" />
+                            <label for="quantity" class="px-2 col-2 col-lg-2 col-md-2 col-sm-2">{{orderedProduct.quantity}}</label>
 
-                            <button class="btn btn-link px-2 col-2 col-lg-2 col-md-2 col-sm-2">
+                            <button type="button" class="btn btn-primary px-2 col-2 col-lg-2 col-md-2 col-sm-2" (click)="increaseQuantity(i)">
                               <bi name="plus" aria-hidden="true"></bi>
                             </button>
                           </div>
                           <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                            <span class="mb-0">{{product.price | currency : 'VND' : 'symbol' : '1.0'}}</span>
+                            <span class="mb-0">{{orderedProduct.amount | currency : 'VND' : 'symbol' : '1.0'}}</span>
                           </div>
                           <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                            <button class="btn btn-link">
+                            <button class="btn btn-link" (click)="removeOrderedProduct(i)">
                               <bi name="trash" aria-hidden="true"></bi>
                             </button>
                           </div>
@@ -78,7 +77,7 @@
 
                       <div class="d-flex justify-content-between mb-4 ">
                         <h6 class="text-uppercase">Số lượng</h6>
-                        <h6>{{totalQuantity}}</h6>
+                        <h6>{{totalQuantity | async}}</h6>
                         <h6>cuốn</h6>
                       </div>
                       <hr class="my-4">

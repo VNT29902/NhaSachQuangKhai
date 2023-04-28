@@ -1,7 +1,9 @@
+import { async } from '@angular/core/testing';
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { of } from 'rxjs/internal/observable/of';
+import { OrderedProduct } from 'src/app/model/response/OrderedProduct';
 import { Product } from 'src/app/model/response/product';
 import { ProductService } from 'src/app/service/product.service';
 
@@ -12,7 +14,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class OrderComponent implements OnInit {
 
-  orderedProducts: Product[] = [];
+  orderedProducts: OrderedProduct[] = [];
 
   // orderedProducts: Product[] = [
   //   {
@@ -137,15 +139,34 @@ export class OrderComponent implements OnInit {
   // ];
 
   totalAmount: number = 0;
-  totalQuantity: number = 0;
+  totalQuantity: Observable<number>;
 
   constructor(private productService: ProductService) {
     this.orderedProducts = this.productService.getRawOrderedProducts(); // shallow copy
-    this.totalQuantity = this.productService.getTotalQuantity(); // shallow copy
+    this.totalQuantity = this.productService.sharedTotalQuantity$; // shallow copy
     this.totalAmount = this.productService.countTotalAmount(this.orderedProducts);
   }
 
   ngOnInit() {
   }
 
+  decreaseQuantity(i: number) {
+    this.orderedProducts[i].decreaseQuantity();
+    this.totalAmount = this.productService.countTotalAmount(this.orderedProducts);
+    this.productService.setTotalQuantity(this.productService.totalQuantity - 1);
+
+  }
+
+  increaseQuantity(i: number) {
+    this.orderedProducts[i].increaseQuantity();
+    this.totalAmount = this.productService.countTotalAmount(this.orderedProducts);
+    this.productService.setTotalQuantity(this.productService.totalQuantity + 1);
+  }
+
+  removeOrderedProduct(i: number) {
+    console.log("Remove ordered product by index: " + i);
+    const removedProduct = this.orderedProducts[i];
+    this.orderedProducts.splice(i, 1);
+    this.productService.setTotalQuantity(this.productService.totalQuantity - removedProduct.quantity);
+  }
 }
