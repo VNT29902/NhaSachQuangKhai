@@ -18,6 +18,7 @@ import {
   Plus,
   Trash,
   Dash,
+  ArrowLeft,
 } from 'ng-bootstrap-icons/icons';
 
 // Select some icons (use an object, not an array)
@@ -38,6 +39,7 @@ const icons = {
   Plus,
   Trash,
   Dash,
+  ArrowLeft,
 };
 
 @NgModule({

@@ -155,6 +155,9 @@ export class OrderComponent implements OnInit {
     this.totalAmount = this.productService.countTotalAmount(this.orderedProducts);
     this.productService.setTotalQuantity(this.productService.totalQuantity - 1);
 
+    if (this.orderedProducts[i].quantity === 0) {
+      this.removeOrderedProduct(i);
+    }
   }
 
   increaseQuantity(i: number) {
@@ -168,5 +171,6 @@ export class OrderComponent implements OnInit {
     const removedProduct = this.orderedProducts[i];
     this.orderedProducts.splice(i, 1);
     this.productService.setTotalQuantity(this.productService.totalQuantity - removedProduct.quantity);
+    this.totalAmount = this.productService.countTotalAmount(this.orderedProducts);
   }
 }
