@@ -21,9 +21,9 @@
   cursor: pointer;
 }
 
-.nav-item > nav-item-content:hover {
-  background-color: white;
-}
+/* .btn:hover {
+  border: 1px solid #eee;
+} */
 
 .network-social-icon {
   text-decoration: none;

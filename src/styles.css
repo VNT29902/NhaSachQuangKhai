@@ -16,6 +16,16 @@
   color: red;
 }
 
-fill-black {
+.fill-black {
   color: black;
+}
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #dc3545;
 }

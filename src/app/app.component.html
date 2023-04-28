@@ -50,18 +50,23 @@
       <!-- Individual -->
       <ul class="navbar-nav ms-auto">
         <!-- Account -->
-        <li class="nav-item" tabindex="4">
-          <div class="nav-item-content d-flex justify-content-center align-items-center">
-            <bi name="person-circle" class="icon-search fill-blue-primary"></bi>
-            <a class="nav-link" routerLink="/account">Thông tin tài khoản</a>
-          </div>
+        <li class="nav-item me-2" tabindex="4">
+          <button class="btn btn-outline-success">
+            <div class=" d-flex justify-content-center align-items-center">
+              <bi name="person-circle" class="icon-search fill-blue-primary me-1"></bi>
+              Thông tin tài khoản
+            </div>
+          </button>
         </li>
         <!-- Cart -->
         <li class="nav-item" tabindex="5">
-          <div class="nav-item-content d-flex justify-content-center align-items-center">
-            <bi name="cart4" class="icon-cart fill-black"></bi>
-            <a class="nav-link" routerLink="/order">Giỏ hàng</a>
-          </div>
+          <button class="btn btn-outline-success" routerLink="/order">
+            <div class="d-flex justify-content-center align-items-center">
+              <bi name="cart4" class="icon-cart fill-black me-1"></bi>
+              <span class="me-1">Giỏ hàng</span>
+              <span *ngIf="(totalQuantity | async) > 0" class="badge badge-danger">{{totalQuantity | async}}</span>
+            </div>
+          </button>
         </li>
       </ul>
     </div>
