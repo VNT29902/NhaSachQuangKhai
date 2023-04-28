@@ -12,7 +12,7 @@ export class OrderedProduct {
   }
 
   decreaseQuantity() {
-    if (this.quantity > 1) {
+    if (this.quantity > 0) {
       this.quantity--;
       this.countAmount();
     }
